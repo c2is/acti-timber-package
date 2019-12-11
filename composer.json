@@ -1,0 +1,24 @@
+{
+  "name": "acti/acti-timber-package",
+  "description": "Mu plugin to build a Timber theme",
+  "type": "wordpress-muplugin",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "ade",
+      "email": "a.delcroix@acti.fr"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ActiTimberPackage\\Handler\\": "Handler/",
+      "ActiTimberPackage\\Helper\\": "Helpers/"
+    }
+  }
+}
