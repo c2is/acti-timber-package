@@ -2,6 +2,9 @@
 
 namespace ActiTimberPackage\Handler;
 
+use Timber\Twig_Function;
+use Twig\Extension\StringLoaderExtension;
+
 class TwigHandler
 {
     /** Add timber support. */
@@ -17,8 +20,8 @@ class TwigHandler
    */
     public function addToTwig($twig)
     {
-        $twig->addExtension(new Twig_Extension_StringLoader());
-        $twig->addFunction(new Timber\Twig_Function('acti_get_svg', [$this, 'svgUrlGetContent']));
+        $twig->addExtension(new StringLoaderExtension());
+        $twig->addFunction(new Twig_Function('acti_get_svg', [$this, 'svgUrlGetContent']));
 
         return $twig;
     }
