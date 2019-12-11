@@ -11,6 +11,7 @@
     use ActiTimberPackage\Handler\ContextHandler;
     use ActiTimberPackage\Handler\OptionsHandler;
     use ActiTimberPackage\Handler\LoaderHandler;
+    use ActiTimberPackage\Handler\SvgHandler;
     use ActiTimberPackage\Handler\TwigHandler;
     use Timber\Timber;
 
@@ -22,6 +23,7 @@ function initActiTimberPackageProcess()
     new CapabilitiesHandler();
     new ContextHandler();
     new OptionsHandler();
+    new SvgHandler();
     new TwigHandler();
 }
 
