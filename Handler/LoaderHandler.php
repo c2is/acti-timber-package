@@ -2,12 +2,13 @@
 
   namespace ActiTimberPackage\Handler;
 
-class TimberLoader extends Timber\Site
+use Timber\Site;
+
+class LoaderHandler extends Site
 {
     /** Add timber support. */
     public function __construct()
     {
-
         /* Handle hooks */
         $parentFunctionFolders = get_template_directory() . '/functions/';
         $childFunctionFolders = get_stylesheet_directory() . '/functions/';

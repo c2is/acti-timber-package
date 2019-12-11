@@ -2,7 +2,7 @@
 
 namespace ActiTimberPackage\Handler;
 
-final class Options
+final class OptionsHandler
 {
     public function __construct()
     {

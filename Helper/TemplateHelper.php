@@ -1,8 +1,8 @@
 <?php
 
-namespace ActiTimberPackage\Helpers;
+namespace ActiTimberPackage\Helper;
 
-final class Template
+final class TemplateHelper
 {
     /**
      * Retrieve page url from template

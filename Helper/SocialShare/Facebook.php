@@ -2,7 +2,7 @@
 
 namespace ActiTimberPackage\Helpers\SocialShare;
 
-final class Facebook extends SocialShare implements SocialShareInterface
+final class Facebook extends SocialShareHelper implements SocialShareInterface
 {
     /**
      * Return Facebook share url

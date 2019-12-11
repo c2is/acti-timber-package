@@ -2,9 +2,9 @@
 
 namespace ActiTimberPackage\Handler;
 
-use ActiTimberPackage\Helpers\SocialShare\SocialShare;
+use ActiTimberPackage\Helper\SocialShare\SocialShareHelper;
 
-final class Context
+final class ContextHandler
 {
     public function __construct()
     {
@@ -13,7 +13,7 @@ final class Context
 
     public function addSocialShareToContext()
     {
-        $socialShareClass = new SocialShare();
+        $socialShareClass = new SocialShareHelper();
         $context['acti_social_share'] = $socialShareClass;
 
         return $context;

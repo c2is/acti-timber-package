@@ -1,8 +1,8 @@
 <?php
 
-namespace ActiTimberPackage\Helpers\SocialShare;
+namespace ActiTimberPackage\Helper\SocialShare;
 
-class SocialShare
+class SocialShareHelper
 {
     /**
      * ActiSocialShare constructor.

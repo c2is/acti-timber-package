@@ -1,8 +1,8 @@
 <?php
 
-namespace ActiTimberPackage\Helpers;
+namespace ActiTimberPackage\Helper;
 
-final class Capabilities
+final class CapabilitiesHelper
 {
     /**
      * Capabilites to only edit or create own post type

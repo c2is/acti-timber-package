@@ -2,7 +2,7 @@
 
 namespace ActiTimberPackage\Helpers\SocialShare;
 
-final class Twitter extends SocialShare implements SocialShareInterface
+final class Twitter extends SocialShareHelper implements SocialShareInterface
 {
     /**
      * Return Twitter share url

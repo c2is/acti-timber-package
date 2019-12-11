@@ -2,7 +2,7 @@
 
 namespace ActiTimberPackage\Handler;
 
-final class UploadSvg
+final class SvgHandler
 {
     public function __construct()
     {

@@ -2,7 +2,7 @@
 
 namespace ActiTimberPackage\Handler;
 
-class Twig
+class TwigHandler
 {
     /** Add timber support. */
     public function __construct()

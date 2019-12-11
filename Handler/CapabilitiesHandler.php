@@ -2,7 +2,9 @@
 
 namespace ActiTimberPackage\Handler;
 
-final class Capabilities
+use ActiTimberPackage\Helper\CapabilitiesHelper;
+
+final class CapabilitiesHandler
 {
     public function __construct()
     {
@@ -17,6 +19,6 @@ final class Capabilities
         $actiCaps = array(
           'edit_theme_settings'
         );
-        \ActiTimberPackage\Helpers\Capabilities::addCaps($actiCaps, $role);
+        CapabilitiesHelper::addCaps($actiCaps, $role);
     }
 }

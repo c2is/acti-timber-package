@@ -2,7 +2,7 @@
 
 namespace ActiTimberPackage\Helpers\SocialShare;
 
-final class Linkedin extends SocialShare implements SocialShareInterface
+final class Linkedin extends SocialShareHelper implements SocialShareInterface
 {
     /**
      * Return Linkedin share url
