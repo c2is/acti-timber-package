@@ -19,5 +19,5 @@
         ">
     {% endfor %}
 
-    <img {% if acti_picture_class %}class="{{ acti_picture_class }}"{% endif %} src="{{ acti_picture_src }}" {% if acti_picture_alt %}alt="{{ acti_picture_alt }}"{% endif %}>
+    <img {% if acti_picture_class %}class="{{ acti_picture_class }}"{% endif %} src="{{ acti_picture_src }}" {% if acti_picture_alt %}alt="{{ acti_picture_alt }}"{% endif %} {{ acti_picture_attrs }}>
 </picture>

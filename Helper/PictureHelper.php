@@ -16,7 +16,7 @@ final class PictureHelper
      * @param $alt string
      * @param $retina array
      */
-    public static function create($src, $sizes, $retina, $class = null, $alt = null)
+    public static function create($src, $sizes, $retina, $class = null, $alt = null, $attrs = null)
     {
         $templateLocation = WPMU_PLUGIN_DIR . '/acti-timber-package/Templates/picture/base.twig';
 
@@ -37,6 +37,7 @@ final class PictureHelper
         $context['acti_picture_retina'] = $retina;
         $context['acti_picture_class'] = $class;
         $context['acti_picture_alt'] = $alt;
+        $context['acti_picture_attrs'] = $attrs;
 
         Timber::render($templateLocation, $context);
     }
