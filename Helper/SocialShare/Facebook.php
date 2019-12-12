@@ -1,6 +1,6 @@
 <?php
 
-namespace ActiTimberPackage\Helpers\SocialShare;
+namespace ActiTimberPackage\Helper\SocialShare;
 
 final class Facebook extends SocialShareHelper implements SocialShareInterface
 {

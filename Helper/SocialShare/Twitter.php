@@ -1,6 +1,6 @@
 <?php
 
-namespace ActiTimberPackage\Helpers\SocialShare;
+namespace ActiTimberPackage\Helper\SocialShare;
 
 final class Twitter extends SocialShareHelper implements SocialShareInterface
 {

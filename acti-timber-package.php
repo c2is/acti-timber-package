@@ -23,8 +23,8 @@ function initActiTimberPackageProcess()
     new CapabilitiesHandler();
     new ContextHandler();
     new OptionsHandler();
-    new SvgHandler();
     new TwigHandler();
+    new SvgHandler();
 }
 
 function initActiTimberPackageSite()

@@ -2,6 +2,7 @@
 
 namespace ActiTimberPackage\Handler;
 
+use DOMDocument;
 use Timber\Twig_Function;
 use Twig\Extension\StringLoaderExtension;
 

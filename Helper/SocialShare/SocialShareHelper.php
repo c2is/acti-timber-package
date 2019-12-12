@@ -13,7 +13,7 @@ class SocialShareHelper
 
     public function getFeed($feed)
     {
-        $className = '\SocialShare\\';
+        $className = '\ActiTimberPackage\Helper\SocialShare\\';
         $className .= ucfirst($feed);
         $socialShareClass = new $className();
 
