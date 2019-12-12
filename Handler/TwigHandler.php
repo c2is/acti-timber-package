@@ -23,6 +23,7 @@ class TwigHandler
     {
         $twig->addExtension(new StringLoaderExtension());
         $twig->addFunction(new Twig_Function('acti_get_svg', [$this, 'svgUrlGetContent']));
+        $twig->addFunction(new Twig_Function('acti_picture', '\ActiTimberPackage\Helper\PictureHelper::create'));
 
         return $twig;
     }

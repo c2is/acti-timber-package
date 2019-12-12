@@ -1,0 +1,23 @@
+<picture>
+    {% for size, data in acti_picture_sizes %}
+
+        {% if data.max %}
+            {% set media =  '(min-width:'~data.min~'px) and (max-width:'~data.max~'px)' %}
+        {% else %}
+            {% set media =  '(min-width:'~data.min~'px)' %}
+        {% endif %}
+
+        <source type="image/webp" media="{{ media }}" srcset="
+            {% for retina in acti_picture_retina %}
+                {{ data.src|retina(retina)|towebp }} {{ retina }}x{% if loop.last is same as(false) %},{% endif %}
+            {% endfor %}
+        ">
+        <source type="image/jpeg" media="{{ media }}" srcset="
+            {% for retina in acti_picture_retina %}
+                {{ data.src|retina(retina) }} {{ retina }}x{% if loop.last is same as(false) %},{% endif %}
+            {% endfor %}
+        ">
+    {% endfor %}
+
+    <img {% if acti_picture_class %}class="{{ acti_picture_class }}"{% endif %} src="{{ acti_picture_src }}" {% if acti_picture_alt %}alt="{{ acti_picture_alt }}"{% endif %}>
+</picture>
