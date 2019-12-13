@@ -11,7 +11,7 @@ final class ContextHandler
         add_action('timber/context', array($this, 'addSocialShareToContext'));
     }
 
-    public function addSocialShareToContext()
+    public function addSocialShareToContext($context)
     {
         $socialShareClass = new SocialShareHelper();
         $context['acti_social_share'] = $socialShareClass;
