@@ -15,8 +15,10 @@
          * @param $class string
          * @param $alt string
          * @param $retina array
+         * @param $attrs array
+         * @param $crop string
          */
-        public static function create($src, $sizes, $retina, $class = null, $alt = null, $attrs = null)
+        public static function create($src, $sizes, $retina, $class = null, $alt = null, $attrs = null, $crop = 'center')
         {
             $templateLocation = WPMU_PLUGIN_DIR . '/acti-timber-package/Templates/picture/base.twig';
 
@@ -26,7 +28,7 @@
             foreach ($sizes as $size => $args) {
                 $resizes[$size] = [
                     'min'   => $args['min'],
-                    'src'   => $imageHelper->resize($jpgImage, $args['resize'][0], $args['resize'][1])
+                    'src'   => $imageHelper->resize($jpgImage, $args['resize'][0], $args['resize'][1], $crop)
                 ];
 
                 if (isset($args['max'])) {
