@@ -9,6 +9,7 @@
 
     use ActiTimberPackage\Handler\CapabilitiesHandler;
     use ActiTimberPackage\Handler\ContextHandler;
+    use ActiTimberPackage\Handler\MailHandler;
     use ActiTimberPackage\Handler\OptionsHandler;
     use ActiTimberPackage\Handler\LoaderHandler;
     use ActiTimberPackage\Handler\SvgHandler;
@@ -25,6 +26,7 @@ function initActiTimberPackageProcess()
     new OptionsHandler();
     new TwigHandler();
     new SvgHandler();
+    new MailHandler();
 }
 
 function initActiTimberPackageSite()
