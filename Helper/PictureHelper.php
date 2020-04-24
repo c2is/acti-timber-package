@@ -17,8 +17,9 @@ final class PictureHelper
      * @param $retina array
      * @param $attrs array
      * @param $crop string
+     * @param $output boolean
      */
-    public static function create($src, $sizes, $retina, $class = null, $alt = null, $attrs = null, $crop = 'center')
+    public static function create($src, $sizes, $retina, $class = null, $alt = null, $attrs = null, $crop = 'center', $output = true)
     {
         $templateLocation = '@acti_helper/picture/base.twig';
 
@@ -44,6 +45,11 @@ final class PictureHelper
         $context['acti_picture_alt'] = $alt;
         $context['acti_picture_attrs'] = $attrs;
 
-        Timber::render($templateLocation, $context);
+        if ($output) {
+            Timber::render($templateLocation, $context);
+        }
+        else {
+            return Timber::compile($templateLocation, $context);
+        }
     }
 }
