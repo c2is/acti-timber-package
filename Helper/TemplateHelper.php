@@ -82,4 +82,26 @@ final class TemplateHelper
 
         return $postID;
     }
+
+    /**
+     * Retrieve post ID from template
+     *
+     * @param $template string template name
+     * @return array post IDs
+     */
+    public static function getTemplatePageIds($template)
+    {
+        $postID = null;
+        $args = [
+            'post_type' => 'page',
+            'nopaging' => true,
+            'post_status' => ['publish', 'private'],
+            'suppress_filters'  => 0,
+            'fields' => 'ids',
+            'meta_key' => '_wp_page_template',
+            'meta_value' => $template
+        ];
+
+        return get_posts($args);
+    }
 }
