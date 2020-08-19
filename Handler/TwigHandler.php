@@ -36,6 +36,7 @@ class TwigHandler
     {
         $twig->addExtension(new StringLoaderExtension());
         $twig->addFunction(new Twig_Function('acti_get_svg', [$this, 'svgUrlGetContent']));
+        $twig->addFunction(new Twig_Function('acti_get_current_url', [$this, 'getCurrentUrl']));
         $twig->addFunction(new Twig_Function('acti_picture', '\ActiTimberPackage\Helper\PictureHelper::create'));
 
         return $twig;
@@ -48,5 +49,14 @@ class TwigHandler
         $iconfile->load($svg);
 
         return $iconfile->saveHTML($iconfile->getElementsByTagName('svg')[0]);
+    }
+
+    public function getCurrentUrl()
+    {
+        global $wp;
+
+        $currentUrl = home_url(add_query_arg(array($_GET), $wp->request));
+
+        return $currentUrl;
     }
 }
